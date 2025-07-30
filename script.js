@@ -44,3 +44,36 @@ function iniciarCorazones() {
     }, 5000);
   }, 300);
 }
+function mostrarPaso2() {
+  document.getElementById('paso1').classList.add('oculto');
+  document.getElementById('paso2').classList.remove('oculto');
+  escribirTexto();
+}
+
+function mostrarPaso3() {
+  document.getElementById('paso2').classList.add('oculto');
+  document.getElementById('paso3').classList.remove('oculto');
+}
+
+function mostrarPaso4() {
+  document.getElementById('paso3').classList.add('oculto');
+  document.getElementById('paso4').classList.remove('oculto');
+}
+
+function escribirTexto() {
+  const texto = "A veces las palabras se quedan cortas, pero aún así quiero intentarlo...";
+  let i = 0;
+  const velocidad = 40;
+  const destino = document.getElementById("typed-text");
+  destino.textContent = "";
+
+  const escribir = () => {
+    if (i < texto.length) {
+      destino.textContent += texto.charAt(i);
+      i++;
+      setTimeout(escribir, velocidad);
+    }
+  };
+
+  escribir();
+}
