@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta paso a paso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondo corazones -->
+  <div id="corazones"></div>
+
+  <!-- Contenedor general -->
+  <div class="container">
+
+    <!-- Header -->
+    <header class="carta-header">
+      <h1>💌 Para alguien muy especial</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="carta-body">
+
+      <!-- Paso 1 -->
+      <section id="paso1">
+        <p>Haz clic para leer lo que quiero decirte...</p>
+        <button onclick="mostrarPaso2()">Leer carta</button>
+      </section>
+
+      <!-- Paso 2 -->
+      <section id="paso2" class="oculto">
+        <p id="typed-text"></p>
+        <button onclick="mostrarPaso3()">Seguir leyendo...</button>
+      </section>
+
+      <!-- Paso 3 -->
+      <section id="paso3" class="oculto">
+        <p>
+         No escribo estas palabras esperando cambiar tu camino ni alterar tus decisiones. Solo quiero hablarte desde la parte más honesta de mí. Lo que vivimos tú y yo no fue un error ni un juego; fue real, intenso y verdadero. Fuimos dos personas que se encontraron en el momento menos esperado, y sin buscarlo, algo dentro de mí comenzó a cambiar… sin quererlo, comencé a sentir más de lo que debía.
+
+Me enamoré de tu risa, de tus silencios, de esa forma tuya de mirar el mundo… Me enamoré de ti, sin promesas, sin garantías, solo con el corazón desnudo. Y sé que ahora tienes otro camino, otra historia… pero también sé que lo que compartimos no fue algo que pase todos los días.
+
+No te escribo para incomodarte, ni para quedarme. Te escribo para que, en algún rincón de tu memoria, exista este recuerdo: que hubo alguien que te amó sin condiciones, que te deseó libertad aunque eso significara su propia ausencia. Y si algún día, en la calma de la noche o en medio de una conversación vacía, algo dentro de ti se agita y te pregunta quién te amó de verdad… recuerda esto. Porque aunque me aleje, una parte de mí siempre va a seguir deseando que seas feliz, incluso si no es conmigo.
+        </p>
+        <button onclick="mostrarPaso4()">Ver video 🎥</button>
+      </section>
+
+      <!-- Paso 4 (video) -->
+      <section id="paso4" class="oculto">
+        <div class="video-container">
+          <video controls>
+            <source src="video/video.mp4" type="video/mp4">
+          
+          </video>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="carta-footer">
+      <p>Hecho con cariño ❤️</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

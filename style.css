@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  background: linear-gradient(#ffdde1, #ee9ca7);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  z-index: 10;
+}
+
+.oculto {
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5e78;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff3f61;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Video */
+/* Video responsivo para celulares */
+.video-container {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+
+/* Corazones flotando */
+#corazones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.corazon {
+  position: absolute;
+  color: #ff5e78;
+  font-size: 20px;
+  animation: flotar 5s linear infinite;
+}
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
